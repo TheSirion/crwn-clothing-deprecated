@@ -43,6 +43,7 @@ firebase.initializeApp(config);
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
+// acessa o Firebase para autenticação e ativa o popup para conectar o usuário.
 const Provider = new firebase.auth.GoogleAuthProvider();
 Provider.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(Provider);
